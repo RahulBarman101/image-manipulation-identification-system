@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <title>IMIS</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/display.css') }}">
+  </head>
+  <body>
+      <header>
+          <nav>
+              <div class="row">
+                <img src="../static/images/logo.png" class="logo">
+                <ul class="main-nav">
+                  <li><a href="{{ url_for('home') }}">Home</a></li>
+                  <li><a href="#">How to Predict</a></li>
+                  <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+                </ul>
+              </div>
+          </nav>
+
+          <div class="main-content-header">
+          <h1>The Predicted Image :</h1>
+          <p><p><img src="../static/images/prediction/new_img.png?random=323527528432525.24234" onload="unlinkImage(new_img.png)" alt="sorry broken image...." id="display" width="600" height="400" /></p></p>
+          </div>
+
+      </header>
+  </body>
+</html>

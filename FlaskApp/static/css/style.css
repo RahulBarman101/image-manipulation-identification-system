@@ -1,0 +1,111 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 20px;
+  overflow-x: hidden;
+  color: white;
+}
+
+header{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../images/header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.clearfix:after{
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0px;
+  clear: both;
+}
+
+.row{
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.logo{
+  height: 70px;
+  width: auto;
+  float: left;
+  margin-top: 40px;
+}
+
+.main-nav{
+  float: right;
+  margin-top: 60px;
+}
+
+.main-nav li{
+  display: inline-block;
+  list-style: none;
+  margin-left: 30px;
+  margin-right: 50px;
+}
+
+.main-nav li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 90%;
+  font-weight: 100;
+}
+
+.main-nav li a:hover{
+  border-bottom: 2px solid #808080;
+}
+
+.main-content-header{
+  width: 1180px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+}
+
+h1{
+  color: #fff;
+  word-spacing: 10px;
+  margin-bottom: 40px;
+  border-top: 300px;
+}
+
+.btn{
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: lighter;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2, color 0.2;
+}
+
+.btn-full{
+  background-color: transparent;
+  color: #808080;
+  border: 1px solid #808080;
+  position: absolute;
+}
+
+.btn-full:hover{
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 1180px){
+  .main-content-header{
+    width: 100%;
+    padding: 0 2%;
+  }
+}
+
+#about{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #808080;
+  left: 50%;
+}

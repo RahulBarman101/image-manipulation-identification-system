@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>IMIS</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+      <header>
+          <nav>
+              <div class="row">
+                <img src="../static/images/logo.png" class="logo">
+                <ul class="main-nav">
+                  <li><a href="{{ url_for('home') }}">Home</a></li>
+                  <li><a href="#">How to Predict</a></li>
+                  <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+                </ul>
+              </div>
+          </nav>
+
+          <div class="main-content-header">
+          <h1>IMAGE MANIPULATION IDENTIFICATION SYSTEM</h1>
+          <a href="{{ url_for('predict') }}" class="btn btn-full"> Predict</a>
+          </div>
+      </header>
+
+      <section id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2>About</h2>
+                <div class="about-content">
+                  Image Manipulation Identification System is a machine learning model which predicts the percentage of manipulation in the picture.
+                </div>
+            </div>
+            <div class="col-md-6"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="">
+
+      </section>
+
+  </body>
+</html>

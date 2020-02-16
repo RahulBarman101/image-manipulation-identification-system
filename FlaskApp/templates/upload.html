@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Upload</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/upload.css') }}">
+    </head>
+    <body>
+            <header>
+                    <nav>
+                        <div class="row">
+                          <img src="../static/images/logo.png" class="logo">
+                          <ul class="main-nav">
+                            <li><a href="{{ url_for('home') }}">Home</a></li>
+                            <li><a href="#">How to Predict</a></li>
+                            <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+                          </ul>
+                        </div>
+                    </nav>
+            </header>
+
+        <div class="main-content-header">    
+            <h1>Image Uploaded</h1>
+            <img src="#" alt="uploaded image">
+        </div>    
+
+        <p><img id="output" width="200" /></p>
+        <script>
+                var loadFile = function(event) {
+                  var image = document.getElementById('output');
+                  image.src = URL.createObjectURL(event.target.files[0]);
+                };
+        </script>
+        <!--form id="upload-form" action="{{url_for('upload')}}" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/jpg">
+            <input type="submit" value="upload">
+        </form-->
+    </body>
+</html>

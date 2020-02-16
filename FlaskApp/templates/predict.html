@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    
+  <head>
+      <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+      <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+      <script src="myscript.js"></script>
+    <meta charset="utf-8">
+    <title>Predict</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/predict.css') }}">
+  </head>
+  
+  <body>
+    <header>
+        <nav>
+            <div class="row">
+              <img src="../static/images/logo.png" class="logo">
+              <ul class="main-nav">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="#">How to Predict</a></li>
+                <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+              </ul>
+            </div>
+        </nav>
+
+        <div class="browse">
+        <h1 style="text-align: center;padding-top: 120px;">Predict</h1>
+        <p style="text-align: center;word-spacing: 2px;">Upload Image</p>
+        </div>
+        <!--div style="padding-left: 200px;">
+        <input type='file' accept= "image/jpg" onchange="handleImageUpload()" style="text-align: center;"/>
+        <br><img id="blah" src="" alt="your image" style="padding: 1
+        00px;"> 
+        </div-->
+        <!--form action="myform.cgi">
+          <input type="file" name="fileupload" value="fileupload" id="fileupload">
+          <br><input type="image" src="#" alt="Submit" width="100">
+        </form-->
+
+        <form id="upload-form" action="{{url_for('upload')}}" method="POST" enctype="multipart/form-data" style="text-align: center;">
+          <input type="file" name="file" accept="image/jpg" onchange="loadFile(event)" style="padding: 10px;">
+          <input type="submit" value="upload">
+          <p><p><img id="output" width="1000" height="200" /></p></p>
+        </form>
+
+        <script>
+            var loadFile = function(event) {
+              var image = document.getElementById('output');
+              image.src = URL.createObjectURL(event.target.files[0]);
+            };
+        </script>
+
+    </header>
+  </body>
+</html>
